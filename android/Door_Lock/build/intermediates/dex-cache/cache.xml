@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/home/jahall/Android/AndroidStudioProjects/Door_Lock/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="1ee588ff2c4daf7b97c1cbf922a6c7f027285c2f">
+        <dex dex="/home/jahall/Android/AndroidStudioProjects/Door_Lock/app/build/intermediates/pre-dexed/debug/classes-043d8a7d90cc9d6ac190a2fb18d5a5dc8f2a7a2c.jar" />
+    </item>
+    <item
+        jar="/home/jahall/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.3.1/ecb6e1f8e4b0e84c4b886c2f14a1500caf309757/gson-2.3.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="ecb6e1f8e4b0e84c4b886c2f14a1500caf309757">
+        <dex dex="/home/jahall/Android/AndroidStudioProjects/Door_Lock/app/build/intermediates/pre-dexed/debug/gson-2.3.1-546d8eb8e9dc8dfe67af829fa875cce680994345.jar" />
+    </item>
+    <item
+        jar="/home/jahall/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/18.0/cce0823396aa693798f8882e64213b1772032b09/guava-18.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="cce0823396aa693798f8882e64213b1772032b09">
+        <dex dex="/home/jahall/Android/AndroidStudioProjects/Door_Lock/app/build/intermediates/pre-dexed/debug/guava-18.0-ab20dad2055b57e6ce7c932ae893555f50504ef4.jar" />
+    </item>
+    <item
+        jar="/home/jahall/Android/AndroidStudioProjects/Door_Lock/app/build/intermediates/exploded-aar/io.particle/cloudsdk/0.1.3/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="54a33c703c23d3a9584cca8b9ec006894a673beb">
+        <dex dex="/home/jahall/Android/AndroidStudioProjects/Door_Lock/app/build/intermediates/pre-dexed/debug/classes-4935e2ac31040d868fb266acecd0a2a5275c1db6.jar" />
+    </item>
+    <item
+        jar="/home/jahall/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.4.0/5b72bf48563ea8410e650de14aa33ff69a3e8c35/okio-1.4.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="5b72bf48563ea8410e650de14aa33ff69a3e8c35">
+        <dex dex="/home/jahall/Android/AndroidStudioProjects/Door_Lock/app/build/intermediates/pre-dexed/debug/okio-1.4.0-3d4b41b8a07cb4b1e002d928c8d7a20b612438c9.jar" />
+    </item>
+    <item
+        jar="/home/jahall/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp/okhttp/2.3.0/2e7bc7033dc2c8423e661224171b3133fb155b28/okhttp-2.3.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="2e7bc7033dc2c8423e661224171b3133fb155b28">
+        <dex dex="/home/jahall/Android/AndroidStudioProjects/Door_Lock/app/build/intermediates/pre-dexed/debug/okhttp-2.3.0-15921a833946cca44deffb5416e7ffb39b1c1c4e.jar" />
+    </item>
+    <item
+        jar="/home/jahall/Downloads/android-studio/sdk/extras/android/m2repository/com/android/support/support-annotations/22.2.0/support-annotations-22.2.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="66b42a1f3eb7676070b7ef7f14b603483aecbee1">
+        <dex dex="/home/jahall/Android/AndroidStudioProjects/Door_Lock/app/build/intermediates/pre-dexed/debug/support-annotations-22.2.0-4bd5872ea1903afd43acf5f85c13b42e98812d38.jar" />
+    </item>
+    <item
+        jar="/home/jahall/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit/retrofit/1.9.0/a681c044244d9fc375198588297a39ba78028423/retrofit-1.9.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="a681c044244d9fc375198588297a39ba78028423">
+        <dex dex="/home/jahall/Android/AndroidStudioProjects/Door_Lock/app/build/intermediates/pre-dexed/debug/retrofit-1.9.0-88b2846a9aa59089ace48ed60015ba1896ce9e06.jar" />
+    </item>
+    <item
+        jar="/home/jahall/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-lang3/3.3.2/90a3822c38ec8c996e84c16a3477ef632cbc87a3/commons-lang3-3.3.2.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="90a3822c38ec8c996e84c16a3477ef632cbc87a3">
+        <dex dex="/home/jahall/Android/AndroidStudioProjects/Door_Lock/app/build/intermediates/pre-dexed/debug/commons-lang3-3.3.2-20e98e1c60f2c2421f36236707c4e9a53ca68360.jar" />
+    </item>
+    <item
+        jar="/home/jahall/Android/AndroidStudioProjects/Door_Lock/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/jars/libs/internal_impl-22.2.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="57f2ab85c164ff1676ec64dee787981c046fab79">
+        <dex dex="/home/jahall/Android/AndroidStudioProjects/Door_Lock/app/build/intermediates/pre-dexed/debug/internal_impl-22.2.0-fccf70a304b307134ea85d65f358b0be86ebcf9e.jar" />
+    </item>
+
+</items>
