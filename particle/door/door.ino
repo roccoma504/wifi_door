@@ -104,14 +104,17 @@ void setup() {
     Spark.variable("state_2", &state_2, INT);
     Spark.variable("state_3", &state_3, INT);
     Spark.variable("state_4", &state_4, INT);
+    Spark.variable("door_locked", &door_locked, INT);
 
     // Set the global functions that are accessed by the mobile applications.
     Spark.function("unlock", unlock);
     Spark.function("lock", lock);
-    Spark.function ("status", get_status);
+    Spark.function("status", get_status);
 
     // Set the board on.
     board_running = 1;
+    
+   // WiFi.off();
 }
 
 void loop() 
@@ -122,6 +125,8 @@ void loop()
     read_switches();
     // Check the conditions for the door to auto lock.
     door_auto_lock();
+    // Check the state of the door for manual intervention.
+    is_locked();
 }
 
 // Loop on reading the state of the magnet for display on the software and for
@@ -140,6 +145,25 @@ void read_switches ()
     state_3 = digitalRead(pin_sw_3);
     state_4 = digitalRead(pin_sw_4);
 }
+
+// Check to see if the door is locked or unlocked. This is necessary
+// as the door can be manually locked and unlocked and we want
+// the software appliations to know the state at any given time.
+void is_locked()
+{
+    // Check to see if door is locked.
+    if (state_1 == 1 && state_2 == 1 && state_3 == 0 && state_4 == 0)
+    {
+        door_locked = 1;
+    }
+    // Check to see if door is unlocked.
+    else if (state_1 == 0 && state_2 == 0 && state_3 == 1 && state_4 == 1)
+    {
+        door_locked = 0;
+    }
+}
+
+
 
 // The reset function that is used by the mobile applications to know what the posistion
 // of the lock is for display. To support the Particle API this function needs a String 
@@ -278,6 +302,5 @@ void move(int speed, int direction)
     analogWrite(PWMA, speed);
   
 }
-
 
 
