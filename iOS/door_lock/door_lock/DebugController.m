@@ -113,6 +113,7 @@ NSTimer *refreshTimer;
                     
                 }}];
         }
+        NSLog(@"failed login");
         }];
     
     // Refresh the switches. If the network is poor, increase this interval and slow down

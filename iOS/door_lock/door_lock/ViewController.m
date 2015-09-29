@@ -22,22 +22,21 @@
 
 // Global timer.
 NSTimer *timer;
+NSTimer *refreshScreenTimer;
 
 // Default timeout in iterations.
 int timeout_count = 0;
 
 @implementation ViewController
 
-
 // Retrieves the status of the door and changes the background color.
 -(void)door_to_string: (NSNumber*) status
 {
-    
+    self.activity_view.stopAnimating;
+
     // Door is locked.
     if ([status  isEqual: @1])
     {
-
-        self.activity_view.stopAnimating;
         self.view.backgroundColor = [[UIColor alloc]initWithRed:230.0/255.0 green:126.0/255.0 blue:34.0/255.0 alpha:1.0];
         self.lock_button.hidden = YES;
         self.unlock_button.hidden = NO;
@@ -46,7 +45,6 @@ int timeout_count = 0;
     // Door is unlocked.
     else if ([status  isEqual: @0])
     {
-        self.activity_view.stopAnimating;
         self.view.backgroundColor = [[UIColor alloc]initWithRed:33.0/255.0 green:150.0/255.0 blue:243.0/255.0 alpha:1.0];
         self.lock_button.hidden = NO;
         self.unlock_button.hidden = YES;
@@ -70,8 +68,6 @@ int timeout_count = 0;
 
 // Retrieve if the board is connected to Wifi and has successfully booted up.
 -(void)board_status{
-
-
     [photon getVariable:@"board_run" completion:^(id result, NSError *error) {
         NSLog(@"result is %@",(NSNumber *)result);
         if (!error) {
@@ -79,6 +75,9 @@ int timeout_count = 0;
             {
                 timeout_count = 0;
                 [NSTimer scheduledTimerWithTimeInterval: 0.5 target: self selector:@selector(pin_status)  userInfo: nil repeats:YES];
+                [NSTimer scheduledTimerWithTimeInterval: 0.1 target: self selector:@selector(checkPins)  userInfo: nil repeats:YES];
+
+                
             }
         }
         else {
@@ -100,7 +99,7 @@ int timeout_count = 0;
     
     // Log into the Spark environment. Hardcoded values for now. If the login in successful print out to the
     // screen that we have connected.
-    [[SparkCloud sharedInstance] loginWithUser:@"yourname" password:@"yourpassword" completion:^(NSError *error) {
+    [[SparkCloud sharedInstance] loginWithUser:@"gymboh32@gmail.com" password:@"Ragecastle69" completion:^(NSError *error) {
         if (!error){
             NSLog(@"Logged in to cloud");
             [[SparkCloud sharedInstance] getDevices:^(NSArray *sparkDevices, NSError *error) {
@@ -109,7 +108,7 @@ int timeout_count = 0;
                 // Look for out board "kitty_hobo"
                 for (SparkDevice *device in sparkDevices)
                 {
-                    if ([device.name isEqualToString:@"yourboard"]) //Put in your device name here.
+                    if ([device.name isEqualToString:@"kitty_hobo"]) //Put in your device name here.
                         photon = device;
                     [self board_status];
                     
@@ -134,7 +133,6 @@ int timeout_count = 0;
 // Initial setup.
 - (void)viewDidLoad {
     [super viewDidLoad];
-
 }
 
 -(void)viewDidAppear:(BOOL)animated{
@@ -173,6 +171,10 @@ int timeout_count = 0;
     [photon callFunction:@"reset" withArguments:@[@"reset"] completion:^(NSNumber *resultCode, NSError *error) {
         
     }];
+}
+
+-(void)checkPins{
+
 }
 
 - (void)didReceiveMemoryWarning {
